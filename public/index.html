@@ -2,27 +2,53 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
-  <title>Dva Demo</title>
-  <link rel="stylesheet" href="index.css" />
-  <link rel="stylesheet" href="./alicdnFont.css">
-  <script src="./fastclick.js"></script>
-  <script>
-    if ('addEventListener' in document) {
-      document.addEventListener('DOMContentLoaded', function () {
-        FastClick.attach(document.body);
-      }, false);
-    }
-    if (!window.Promise) {
-      document.writeln('<script src="./es6-promise.min.js"' + '>' + '<' + '/' + 'script>');
-    }
-  </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <!-- UC强制竖屏 -->
+    <meta name="screen-orientation" content="portrait">
+    <!-- QQ强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <!-- UC强制全屏 -->
+    <meta name="full-screen" content="yes">
+    <!-- QQ强制全屏 -->
+    <meta name="x5-fullscreen" content="true">
+    <!-- UC应用模式 -->
+    <meta name="browsermode" content="application">
+    <!-- QQ应用模式 -->
+    <meta name="x5-page-mode" content="app">
+    <!-- windows phone 点击无高光 -->
+    <meta name="msapplication-tap-highlight" content="no">
+    <!-- 适应移动端 END -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <meta content=”black” name=”apple-mobile-web-app-status-bar-style” />
+    <title>Dva Demo</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="./alicdnFont.css">
+    <script src="./fastclick.js"></script>
+    <script>
+        if ('addEventListener' in document) {
+            document.addEventListener('DOMContentLoaded', function () {
+                FastClick.attach(document.body);
+            }, false);
+        }
+        if (!window.Promise) {
+            document.writeln('<script src="./es6-promise.min.js"' + '>' + '<' + '/' + 'script>');
+        }
+    </script>
+    <style>
+        /* 解决手机上滑动时没有惯性bug */
+        * {
+            -webkit-overflow-scrolling: touch;
+        }
+    </style>
 </head>
 
 <body>
-  <div id="root"></div>
-  <script src="index.js"></script>
+    <div id="root"></div>
+    <script src="index.js"></script>
 </body>
 
 </html>
